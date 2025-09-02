@@ -1,0 +1,49 @@
+{
+  "name": "invizio-wms-server",
+  "version": "1.0.0",
+  "description": "Invizio WMS Server - Production Ready Dollecato Warehouse Management System",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "migrate": "node scripts/migrate.js",
+    "seed": "node scripts/seed-products.js",
+    "create-admin": "node scripts/create-default-admin.js",
+    "backup": "node scripts/backup.js",
+    "restore": "node scripts/restore.js",
+    "setup": "npm install && npm run migrate && npm run create-admin",
+    "production": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "compression": "^1.7.4",
+    "morgan": "^1.10.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.11.3",
+    "pg-pool": "^3.6.1",
+    "dotenv": "^16.3.1",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "multer": "^1.4.5-lts.1",
+    "winston": "^3.11.0",
+    "node-cron": "^3.0.3",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "keywords": [
+    "warehouse-management",
+    "inventory-system",
+    "nodejs",
+    "postgresql",
+    "express",
+    "wms"
+  ],
+  "author": "DigiProTech",
+  "license": "MIT"
+}
